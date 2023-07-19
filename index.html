@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>BMI CALCULATOR</h1>
+            <h4 class="info">Berat badan ideal adalah impian semua orang, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana dengan mu? <br>YUK HITUNG SEKARANG !</h4>
+            
+            <div class="content">
+                
+                <div class="input">
+                    <label for="age">age</label>
+                    <input type="number" class="text-input" id="age" autocomplete="off" required>    
+                </div>
+                
+                <div class="gender">
+                    <label class="container">
+                        <label class="text">male</label>
+                    <input type="radio" name="radio" id="m">
+                    <span class="chechmart"></span>
+
+                    <label class="container">
+                        <label class="text">female</label>
+                        <input type="radio" name="radio" id="f">
+                        <span class="chechmart"></span>
+                        
+                        
+                    </label>
+                </div>
+                
+                <div class="containerHW">
+                    <div class="inputH">
+                        <label for="height">Height(cm)</label>
+                        <br>
+                        <span class="pencil-icon"><i class="fas fa-pencil-alt"></i></span>
+                        <input type="number" id="height" required>
+                    </div>
+                    <div class="inputw">
+                        <label for="height">weight(kg)</label>
+                        <br>
+                        <span class="pencil-icon"><i class="fas fa-pencil-alt"></i></span>
+                        
+                        <input type="number" id="weight" required>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="calculate" id="submit" >calculate BMI</button>
+            <input type="button" class="rt" value="Reset" onclick="reset()">
+            <div class="result">
+                <p>your BMI is</p>
+                <div class="id">00.00</div>
+                <p class="comment"></p>
+                <img src="th.jpg" alt="">
+        </div>
+        <div class="footer"></div>
+        </div>
+    </div>
+
+
+
+
+    
+            <!-- <script>
+        // Function to calculate the BMI
+        function calculateBMI() {
+            const age = parseInt(document.getElementById('age').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const gender = document.querySelector('input[name="radio"]:checked').value;
+
+            // Check if all fields have valid inputs
+            if (isNaN(age) || isNaN(height) || isNaN(weight) || !gender) {
+                alert('Please fill all the fields with valid input.');
+                return;
+            }
+
+            // Calculate BMI
+            const bmi = weight / ((height / 100) ** 2);
+            const roundedBMI = bmi.toFixed(2);
+
+            // Display the BMI result
+            const bmiResult = document.querySelector('.id');
+            bmiResult.textContent = roundedBMI;
+
+            // Provide a comment based on BMI category
+            const comment = document.querySelector('.comment');
+            if (bmi < 18.5) {
+                comment.textContent = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                comment.textContent = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                comment.textContent = 'Overweight';
+            } else {
+                comment.textContent = 'Obese';
+            }
+
+            
+            
+        }
+        function reset() {
+document.getElementById('age').value = '';
+document.getElementById('height').value = '';
+document.getElementById('weight').value = '';
+document.querySelector('input[name="radio"]:checked').checked = false;
+
+const bmiResult = document.querySelector('.id');
+bmiResult.textContent = '';
+
+           
+        }
+      
+
+
+
+        // Add event listener to the "Calculate BMI" button
+        const calculateButton = document.getElementById('submit');
+        calculateButton.addEventListener('click', calculateBMI);
+    </script>
+     -->
+</body>
+</html>
